@@ -266,7 +266,7 @@ Após configurado, o Load Balancer gera um DNS que pode ser utilizado para acess
 
 ## 9. Resultado final
 
-<li> Após tudo estar configurado, você pode acessar o WordPress pela URL do seu Load Balancer: </li>
+<li> Após tudo estar configurado, você poderá acessar o WordPress pela URL do seu Load Balancer: </li>
 
 </br>
 
