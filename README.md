@@ -153,13 +153,12 @@ x
 **4.6** Escolha o security group do EFS para cada uma; </br>
 **4.7** Clique em "Next" duas vezes e então em "Create". </br>
 
-</br>
-
 ### Após a criação
 **4.6** Selecione seu EFS e clique em "Attach"; </br>
 **4.7** Copie o comando em "Using the NFS client" e cole-o em seu script para montar o EFS nas instâncias EC2. </br>
 **Obs:** Não se esqueça de checar se ao final do comando no script há o caminho bem definido de **/mnt/efs**, NÃO deixe somente "efs" ou ocorrerá um erro e seu sistema de arquivos não será montado! </br>
 
+x
 
 </br>
 
@@ -205,7 +204,12 @@ x
 **6.13** Cole o comando, mude o nome da chave para "exemplo-nome-chave-ec2-privada-1.pem" e rode em seu CMD; </br>
 **6.14** Digite "yes" e permita a conexão SSH. </br>
 
-9999 testes pra ver se ta tudo funfando
+### Testes para checar se está tudo funcionando
+**6.15** Dê o comando `df -h` e veja se o sistema de arquivos EFS está montado: </br>
+
+x
+
+**6.16** Digite `sudo docker ps` e verifique se seu contêiner do WordPress está rodando. </br>
 
 </br>
 
@@ -226,7 +230,7 @@ x
 
 x
 
-Após configurado, o Load Balancer gera um DNS que pode ser utilizado para acessar o ambiente wordpress, indepedente da instância.
+Após configurado, o Load Balancer gera um DNS que pode ser utilizado para acessar o site do WordPress através do navegador, indepedente da instância utilizada.
 
 </br>
 
