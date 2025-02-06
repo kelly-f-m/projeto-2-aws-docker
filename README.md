@@ -51,9 +51,10 @@ Segunda atividade prática da trilha de **DevSecOps** do programa de bolsas da C
 **1.9** Clique em "Create VPC". </br>
 
 <details>
-  <summary>Imagem da configuração da VPC</summary>
+  <summary>Imagem de configuração da VPC </summary>
 
-  Imagem
+  ![Configuração da VPC](images/config_vpc.png "Configuração da VPC")
+|:--|
 
 </details>
 
@@ -106,7 +107,7 @@ Segunda atividade prática da trilha de **DevSecOps** do programa de bolsas da C
 **3.6** Clique em "Create" para criar. </br>
 </br>
 
-x
+![Configuração da Subnet Group](images/config_rds_subnet_group.png "Configuração da Subnet Group")
 
 ### RDS
 **3.7** Ainda no RDS, navegue até "Databases" e clique em "Create database"; </br>
@@ -129,7 +130,9 @@ x
 <details>
   <summary>Informação importante sobre o banco de dados RDS</summary>
 
-  Imagem + descrição
+  ![Configuração DB do RDS](images/config_importante_rds.png "Configuração DB do RDS")
+|:--|
+| IMPORTANTE: Defina um nome para o seu banco de dados, do contrário ele não será criado! |
 
 </details>
 
@@ -158,7 +161,7 @@ x
 **4.7** Copie o comando em "Using the NFS client" e cole-o em seu script para montar o EFS nas instâncias EC2. </br>
 **Obs:** Não se esqueça de checar se ao final do comando no script há o caminho bem definido de **/mnt/efs**, NÃO deixe somente "efs" ou ocorrerá um erro e seu sistema de arquivos não será montado! </br>
 
-x
+![Script do EFS](images/script_efs.png "Script do EFS")
 
 </br>
 
@@ -207,7 +210,7 @@ x
 ### Testes para checar se está tudo funcionando
 **6.15** Dê o comando `df -h` e veja se o sistema de arquivos EFS está montado: </br>
 
-x
+![Mount do EFS](images/efs_mount.png "Mount do EFS")
 
 **6.16** Digite `sudo docker ps` e verifique se seu contêiner do WordPress está rodando. </br>
 
@@ -228,7 +231,7 @@ x
 **7.7** Em "Instances", clique em "Add instances" e selecione as duas instâncias EC2 privadas; </br>
 **7.8** Por fim, clique em "Create load balancer"; </br>
 
-x
+![Configuração do Load Balancer](images/config_load.png "Configuração do Load Balancer")
 
 Após configurado, o Load Balancer gera um DNS que pode ser utilizado para acessar o site do WordPress através do navegador, indepedente da instância utilizada.
 
