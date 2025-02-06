@@ -39,7 +39,7 @@ services:
     ports:
       - "80:80"
     environment:
-      WORDPRESS_DB_HOST: <seu-rds-endopoint>:3306
+      WORDPRESS_DB_HOST: <seu-rds-endpoint>:3306
       WORDPRESS_DB_USER: nome-do-usuario
       WORDPRESS_DB_PASSWORD: senha-do-usuario
       WORDPRESS_DB_NAME: wordpress
