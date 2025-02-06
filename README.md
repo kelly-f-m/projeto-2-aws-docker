@@ -31,6 +31,7 @@ Segunda atividade prática da trilha de **DevSecOps** do programa de bolsas da C
 6. [Criação e acesso ao Bastion Host](#6-criação-e-acesso-ao-bastion-host)
 7. [Criação e configuração do Load Balancer](#7-criação-e-configuração-do-load-balancer)
 8. [Criação e configuração do Auto Scalling Group](#8-criação-e-configuração-do-auto-scalling-group)
+9. [Resultado final](#9-resultado-final)
 
 </br>
 
@@ -157,8 +158,8 @@ Segunda atividade prática da trilha de **DevSecOps** do programa de bolsas da C
 **4.7** Clique em "Next" duas vezes e então em "Create". </br>
 
 ### Após a criação
-**4.6** Selecione seu EFS e clique em "Attach"; </br>
-**4.7** Copie o comando em "Using the NFS client" e cole-o em seu script para montar o EFS nas instâncias EC2. </br>
+**4.8** Selecione seu EFS e clique em "Attach"; </br>
+**4.9** Copie o comando em "Using the NFS client" e cole-o em seu script para montar o EFS nas instâncias EC2. </br>
 **Obs:** Não se esqueça de checar se ao final do comando no script há o caminho bem definido de **/mnt/efs**, NÃO deixe somente "efs" ou ocorrerá um erro e seu sistema de arquivos não será montado! </br>
 
 ![Script do EFS](images/script_efs.png "Script do EFS")
@@ -260,3 +261,16 @@ Após configurado, o Load Balancer gera um DNS que pode ser utilizado para acess
 **8.11** Clique em "Next" e depois em "Attach to an existing load balancer"; </br>
 **8.12** Clique em "Choose from Classic Load Balancers" e selecione o seu Load Balancer existente; </br>
 **8.13** Deixe o restante das configurações padrão e clique em "Create Auto Scalling group". </br>
+
+</br>
+
+## 9. Resultado final
+
+
+
+
+
+
+
+
+
