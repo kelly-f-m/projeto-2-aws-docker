@@ -1,7 +1,5 @@
 # Atividade Prática 2 | AWS & Docker | Compass UOL
 
-Segunda atividade prática da trilha de **DevSecOps** do programa de bolsas da Compass UOL
-
 </br>
 
 ## Tecnologias:
