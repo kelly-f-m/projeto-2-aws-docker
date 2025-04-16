@@ -1,6 +1,5 @@
-<h1 align="center">Atividade Prática 2 </br>
-Subindo um website WordPress utilizando AWS & Docker </br> 
-Compass UOL</h1>
+<h1 align="center">Atividade Prática 2 | Compass UOL</br>
+Subindo um website WordPress </br> utilizando AWS & Docker</h1>
 
 <p align="center">
   <a href="https://skillicons.dev">
