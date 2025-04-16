@@ -1,22 +1,28 @@
-# Atividade Prática 2 | AWS & Docker | Compass UOL
+<h1 align="center">Atividade Prática 2 / AWS & Docker / Compass UOL</h1>
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=linux,docker,aws" />
+  </a>
+</p>
 
 </br>
 
 ## Tecnologias:
-<li> AWS </li>
-<li> Docker </li>
-<li> Linux </li>
-<li> Shell Script </li>
+- AWS
+- Docker
+- Linux
+- Shell Script
 
 </br>
 
 ## Objetivos:
-<li> Criar uma topologia de rede bem definida, com 4 sub-redes (2 públicas e 2 privadas) para separar os componentes da infraestrutura; </li>
-<li> Configurar e instalar o Docker em duas instâncias EC2 para gerenciar o contêiner da aplicação; </li>
-<li> Fazer o deploy de uma aplicação WordPress dentro de um contêiner nas instâncias EC2; </li>
-<li> Configurar um banco de dados MySQL no RDS, garantindo alta disponibilidade e desempenho; </li>
-<li> Utilizar o Amazon EFS para armazenar arquivos estáticos da aplicação, permitindo compartilhamento entre múltiplas instâncias; </li>
-<li> Implementar um Load Balancer (ELB) para distribuir as requisições entre as instâncias da aplicação e melhorar a escalabilidade. </li>
+- Criar uma topologia de rede bem definida, com 4 sub-redes (2 públicas e 2 privadas) para separar os componentes da infraestrutura;
+- Configurar e instalar o Docker em duas instâncias EC2 para gerenciar o contêiner da aplicação;
+- Fazer o deploy de uma aplicação WordPress dentro de um contêiner nas instâncias EC2;
+- Configurar um banco de dados MySQL no RDS;
+- Utilizar o Amazon EFS para armazenar arquivos estáticos da aplicação;
+- Implementar um Load Balancer (ELB) para distribuir as requisições entre as instâncias da aplicação;
 
 </br>
 
@@ -35,7 +41,7 @@
 
 ## 1. Criação da VPC
 
-<li> A Amazon Virtual Private Cloud (Amazon VPC) permite iniciar recursos da AWS em uma rede virtual logicamente isolada que você mesmo define. </li>
+- A Amazon Virtual Private Cloud (Amazon VPC) permite iniciar recursos da AWS em uma rede virtual logicamente isolada que você mesmo define.
 
 </br>
 
@@ -61,7 +67,7 @@
 
 ## 2. Criação e configuração dos Security Groups
 
-<li> Um Grupo de Segurança (Security Group) atua como um firewall virtual visando controlar o tráfego de entrada e de saída. </li>
+- Um Grupo de Segurança (Security Group) atua como um firewall virtual visando controlar o tráfego de entrada e de saída.
 
 </br>
 
@@ -69,31 +75,31 @@
 **2.2** Clique em "Create security group" e realize a criação na seguinte sequência: </br>
 
 **Load Balancer** </br>
-<li>Regras de entrada: HTTP -> Anywhere-IPv4 </li>
-<li>Regras de saída: padrão</li>
+- Regras de entrada: HTTP -> Anywhere-IPv4
+- Regras de saída: padrã
 
 </br>
 
 **EC2** </br>
-<li>Regras de entrada: HTTP -> Custom: Load Balancer | SSH -> Anywhere-IPv4 </li>
-<li>Regras de saída: padrão</li>
+- Regras de entrada: HTTP -> Custom: Load Balancer | SSH -> Anywhere-IPv4
+- Regras de saída: padrã
 
 </br>
 
 **RDS** </br>
-<li>Regras de entrada: MySQL/Aurora -> Custom: EC2 </li>
-<li>Regras de saída: padrão</li>
+- Regras de entrada: MySQL/Aurora -> Custom: EC2
+- Regras de saída: padrã
 
 </br>
 
 **EFS** </br>
-<li>Regras de entrada: NFS -> Custom: EC2 </li>
-<li>Regras de saída: padrão</li>
+- Regras de entrada: NFS -> Custom: EC2
+- Regras de saída: padrã
 
 </br>
 
 ## 3. Criação e configuração do banco de dados RDS
-<li> O Amazon Relational Database Service (Amazon RDS) é um serviço da Web que facilita a configuração, a operação e escalabilidade de um banco de dados relacional na Nuvem AWS. </li>
+- O Amazon Relational Database Service (Amazon RDS) é um serviço da Web que facilita a configuração, a operação e escalabilidade de um banco de dados relacional na Nuvem AWS.
 
 </br>
 
@@ -143,7 +149,7 @@
 </br>
 
 ## 4. Criação do EFS
-<li> O Amazon EFS é um sistema de arquivos simples, sem servidor, elástico, que aumenta e diminui automaticamente conforme você adiciona e remove arquivos, sem necessidade de gerenciamento ou provisionamento. </li>
+- O Amazon EFS é um sistema de arquivos simples, sem servidor, elástico, que aumenta e diminui automaticamente conforme você adiciona e remove arquivos, sem necessidade de gerenciamento ou provisionamento.
 
 </br>
 
@@ -165,7 +171,7 @@
 </br>
 
 ## 5. Criação das instâncias EC2
-<li> O Amazon Elastic Compute Cloud (Amazon EC2) fornece capacidade de computação escalável e sob demanda na nuvem AWS. </li>
+- O Amazon Elastic Compute Cloud (Amazon EC2) fornece capacidade de computação escalável e sob demanda na nuvem AWS.
 
 </br>
 
@@ -182,12 +188,12 @@
 **5.11** Vá até "Advanced details" e em "User data" cole seu script; </br>
 **5.12** Clique em "Launch instance". </br>
 
-<li> Repita o mesmo processo para a criação de sua segunda instância EC2, sempre lembrando de colocar uma sub-rede privada diferente da que foi anteriormente escolhida. </li>
+- Repita o mesmo processo para a criação de sua segunda instância EC2, sempre lembrando de colocar uma sub-rede privada diferente da que foi anteriormente escolhida.
 
 </br>
 
 ## 6. Criação e acesso ao Bastion Host
-<li> Para acessarmos as instâncias privadas via SSH, podemos configurar um Bastion Host em uma sub-rede pública. </li>
+- Para acessarmos as instâncias privadas via SSH, podemos configurar um Bastion Host em uma sub-rede pública.
 
 </br>
 
@@ -217,7 +223,7 @@
 
 ## 7. Criação e configuração do Load Balancer
 
-<li> O Elastic Load Balancing (ELB) distribui automaticamente seu tráfego de entrada em vários destinos, como EC2 instâncias, contêineres e endereços IP, em uma ou mais zonas de disponibilidade. </li>
+- O Elastic Load Balancing (ELB) distribui automaticamente seu tráfego de entrada em vários destinos, como EC2 instâncias, contêineres e endereços IP, em uma ou mais zonas de disponibilidade.
 
 </br>
 
@@ -238,7 +244,7 @@ Após configurado, o Load Balancer gera um DNS que pode ser utilizado para acess
 
 ## 8. Criação e configuração do Auto Scalling Group
 
-<li> O AWS Auto Scaling monitora os aplicativos e ajusta automaticamente a capacidade para manter um desempenho constante e previsível pelo menor custo possível. </li>
+- O AWS Auto Scaling monitora os aplicativos e ajusta automaticamente a capacidade para manter um desempenho constante e previsível pelo menor custo possível.
 
 </br>
 
@@ -264,13 +270,11 @@ Após configurado, o Load Balancer gera um DNS que pode ser utilizado para acess
 
 ## 9. Resultado final
 
-<li> Após tudo estar configurado, você poderá acessar o WordPress pela URL do seu Load Balancer: </li>
+- Após tudo estar configurado, você poderá acessar o WordPress pela URL do seu Load Balancer:
 
 </br>
 
 ![Resultado](images/resultado.png "Resultado")
-
-
 
 
 
